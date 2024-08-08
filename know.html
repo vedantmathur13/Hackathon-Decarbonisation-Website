@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Know Your Co2e </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+    <link rel="icon" href="Decarbonization.jpg">
+    <style>
+        
+      </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <img src="Logo.jpg" alt="Logo-Decarbonisation" height="80px">
+        </div>
+        <nav>
+            <a href="index.html" class="btn" id="A">Home</a>
+            <a href="solutions.html" class="btn" id="A">Solutions</a>
+            <a href="know.html" class="btn" id="A">Know Your Co2e</a>
+            <a href="contact.html" class="btn" id="A">Contact Us</a>
+        </nav>
+    </header>
+    <br><br><br><br><br><br><br<<br>
+    <center>
+        <h1>Know your Carbon Footprint</h1>
+
+        <style>
+            body {
+              font-family: sans-serif;
+            }
+            #calculator {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin: 20px;
+              border: 1px solid #ccc;
+              padding: 20px;
+            }
+            #calculator label {
+              margin-bottom: 5px;
+            }
+            #calculator input {
+              margin-bottom: 10px;
+              padding: 5px;
+              border: 1px solid #ccc;
+            }
+            #results {
+              margin-top: 20px;
+              font-weight: bold;
+            }
+          </style>
+        
+        <body>
+          <div id="calculator">
+            <h2>Carbon Footprint Calculator</h2>
+            <label for="electricity">Electricity Consumed:</label>
+            <input type="number" id="electricity" value="0">
+            <label for="gas">Natural Gas consumed:</label>
+            <input type="number" id="gas" value="0">
+            <label for="miles">Kilometers Driven:</label>
+            <input type="number" id="miles" value="0">
+            <label for="flights">Flights taken:</label>
+            <input type="number" id="flights" value="0">
+            <button onclick="calculateFootprint()">Calculate</button>
+          </div>
+          <div id="results"></div>
+          <script>
+            function calculateFootprint() {
+              const electricity = parseFloat(document.getElementById('electricity').value);
+              const gas = parseFloat(document.getElementById('gas').value);
+              const miles = parseFloat(document.getElementById('miles').value);
+              const flights = parseFloat(document.getElementById('flights').value);
+        
+             
+              const electricityFootprint = electricity * 0.5; 
+              const gasFootprint = gas * 0.1; 
+              const drivingFootprint = miles * 0.4; 
+              const flightFootprint = flights * 500; 
+        
+              const totalFootprint = electricityFootprint + gasFootprint + drivingFootprint + flightFootprint;
+        
+              document.getElementById('results').innerHTML = `Your estimated carbon footprint is: ${totalFootprint.toFixed(2)} kg CO2e`;
+            }
+          </script>
+          <section>
+          <div class="credit">created by
+              <span>Decarb Experts</span> | all rights reserved</a>
+          </div>
+      </section>
+        </body>
+        
+         
+          
+    </center>
+</body>
+</html>
